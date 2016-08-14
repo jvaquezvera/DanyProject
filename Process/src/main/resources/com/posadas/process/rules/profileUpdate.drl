@@ -1,2 +1,14 @@
 package com.posadas.process.rules;
 
+import com.posadas.process.beans.*;
+
+rule "Row 1 PackagesByProgram"
+	dialect "mvel"
+	when
+		packages : PackagesByProgram( program == "Apreciare" )
+	then
+		packages.setCustomerData( true );
+		packages.setAddress( true );
+		packages.setBankData( false );
+		packages.setTelephone( true );
+end
