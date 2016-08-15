@@ -2,6 +2,7 @@ package com.posadas.process.rules;
 
 import com.posadas.process.beans.*;
 
+//from row number: 1
 rule "Row 1 PackagesByProgram"
 	dialect "mvel"
 	when
@@ -12,3 +13,1525 @@ rule "Row 1 PackagesByProgram"
 		packages.setBankData( false );
 		packages.setTelephone( true );
 end
+
+//from row number: 2
+rule "Row 2 PackagesByProgram"
+	dialect "mvel"
+	when
+		packages : PackagesByProgram( program == "Motiva" )
+	then
+		packages.setCustomerData( true );
+		packages.setAddress( true );
+		packages.setBankData( false );
+		packages.setTelephone( true );
+end
+
+//from row number: 3
+rule "Row 3 PackagesByProgram"
+	dialect "mvel"
+	when
+		packages : PackagesByProgram( program == "Fiesta Rewards" )
+	then
+		packages.setCustomerData( true );
+		packages.setAddress( true );
+		packages.setBankData( false );
+		packages.setTelephone( true );
+end
+
+
+
+//from row number: 1
+rule "Row 1 FieldsByPackage"
+	dialect "mvel"
+	when
+		fields : FieldsByPackage( package == "customerData" , program == "Apreciare" )
+	then
+		fields.setFirstName( true );
+		fields.setMiddleName( true );
+		fields.setLastName( true );
+		fields.setSecondLastName( true );
+		fields.setEmail( true );
+		fields.setBirthDate( true );
+		fields.setCountry( false );
+		fields.setState( false );
+		fields.setCity( false );
+		fields.setColony( false );
+		fields.setAddressType( false );
+		fields.setZipCode( false );
+		fields.setStreetAddress( false );
+		fields.setInteriorNumber( false );
+		fields.setExteriorNumber( false );
+		fields.setPhoneNumber( false );
+		fields.setUseType( false );
+		fields.setCardHolder( false );
+		fields.setCardType( false );
+		fields.setCvvNumber( false );
+		fields.setInteriorNum( false );
+		fields.setExternalNum( false );
+		fields.setNameCompany( true );
+		fields.setCounty( false );
+		fields.setAddresLine1( false );
+		fields.setAddresLine2( false );
+end
+
+//from row number: 2
+rule "Row 2 FieldsByPackage"
+	dialect "mvel"
+	when
+		fields : FieldsByPackage( package == "address" , program == "Apreciare" )
+	then
+		fields.setFirstName( false );
+		fields.setMiddleName( false );
+		fields.setLastName( false );
+		fields.setSecondLastName( false );
+		fields.setEmail( false );
+		fields.setBirthDate( false );
+		fields.setCountry( true );
+		fields.setState( true );
+		fields.setCity( true );
+		fields.setColony( true );
+		fields.setAddressType( true );
+		fields.setZipCode( true );
+		fields.setStreetAddress( true );
+		fields.setInteriorNumber( true );
+		fields.setExteriorNumber( true );
+		fields.setPhoneNumber( false );
+		fields.setUseType( false );
+		fields.setCardHolder( false );
+		fields.setCardType( false );
+		fields.setCvvNumber( false );
+		fields.setInteriorNum( true );
+		fields.setExternalNum( true );
+		fields.setNameCompany( false );
+		fields.setCounty( true );
+		fields.setAddresLine1( true );
+		fields.setAddresLine2( true );
+end
+
+//from row number: 3
+rule "Row 3 FieldsByPackage"
+	dialect "mvel"
+	when
+		fields : FieldsByPackage( package == "bankData" , program == "Apreciare" )
+	then
+		fields.setFirstName( false );
+		fields.setMiddleName( false );
+		fields.setLastName( false );
+		fields.setSecondLastName( false );
+		fields.setEmail( false );
+		fields.setBirthDate( false );
+		fields.setCountry( false );
+		fields.setState( false );
+		fields.setCity( false );
+		fields.setColony( false );
+		fields.setAddressType( false );
+		fields.setZipCode( false );
+		fields.setStreetAddress( false );
+		fields.setInteriorNumber( false );
+		fields.setExteriorNumber( false );
+		fields.setPhoneNumber( false );
+		fields.setUseType( false );
+		fields.setCardHolder( true );
+		fields.setCardType( true );
+		fields.setCvvNumber( true );
+		fields.setInteriorNum( false );
+		fields.setExternalNum( false );
+		fields.setNameCompany( false );
+		fields.setCounty( false );
+		fields.setAddresLine1( false );
+		fields.setAddresLine2( false );
+end
+
+//from row number: 4
+rule "Row 4 FieldsByPackage"
+	dialect "mvel"
+	when
+		fields : FieldsByPackage( package == "telephone" , program == "Apreciare" )
+	then
+		fields.setFirstName( false );
+		fields.setMiddleName( false );
+		fields.setLastName( false );
+		fields.setSecondLastName( false );
+		fields.setEmail( false );
+		fields.setBirthDate( false );
+		fields.setCountry( false );
+		fields.setState( false );
+		fields.setCity( false );
+		fields.setColony( false );
+		fields.setAddressType( false );
+		fields.setZipCode( false );
+		fields.setStreetAddress( false );
+		fields.setInteriorNumber( false );
+		fields.setExteriorNumber( false );
+		fields.setPhoneNumber( true );
+		fields.setUseType( true );
+		fields.setCardHolder( false );
+		fields.setCardType( false );
+		fields.setCvvNumber( false );
+		fields.setInteriorNum( false );
+		fields.setExternalNum( false );
+		fields.setNameCompany( false );
+		fields.setCounty( false );
+		fields.setAddresLine1( false );
+		fields.setAddresLine2( false );
+end
+
+//from row number: 5
+rule "Row 5 FieldsByPackage"
+	dialect "mvel"
+	when
+		fields : FieldsByPackage( package == "customerData" , program == "Motiva" )
+	then
+		fields.setFirstName( true );
+		fields.setMiddleName( true );
+		fields.setLastName( true );
+		fields.setSecondLastName( true );
+		fields.setEmail( true );
+		fields.setBirthDate( true );
+		fields.setCountry( false );
+		fields.setState( false );
+		fields.setCity( false );
+		fields.setColony( false );
+		fields.setAddressType( false );
+		fields.setZipCode( false );
+		fields.setStreetAddress( false );
+		fields.setInteriorNumber( false );
+		fields.setExteriorNumber( false );
+		fields.setPhoneNumber( false );
+		fields.setUseType( false );
+		fields.setCardHolder( false );
+		fields.setCardType( false );
+		fields.setCvvNumber( false );
+		fields.setInteriorNum( false );
+		fields.setExternalNum( false );
+		fields.setNameCompany( true );
+		fields.setCounty( false );
+		fields.setAddresLine1( false );
+		fields.setAddresLine2( false );
+end
+
+//from row number: 6
+rule "Row 6 FieldsByPackage"
+	dialect "mvel"
+	when
+		fields : FieldsByPackage( package == "address" , program == "Motiva" )
+	then
+		fields.setFirstName( false );
+		fields.setMiddleName( false );
+		fields.setLastName( false );
+		fields.setSecondLastName( false );
+		fields.setEmail( false );
+		fields.setBirthDate( false );
+		fields.setCountry( true );
+		fields.setState( true );
+		fields.setCity( true );
+		fields.setColony( true );
+		fields.setAddressType( true );
+		fields.setZipCode( true );
+		fields.setStreetAddress( true );
+		fields.setInteriorNumber( true );
+		fields.setExteriorNumber( true );
+		fields.setPhoneNumber( false );
+		fields.setUseType( false );
+		fields.setCardHolder( false );
+		fields.setCardType( false );
+		fields.setCvvNumber( false );
+		fields.setInteriorNum( true );
+		fields.setExternalNum( true );
+		fields.setNameCompany( false );
+		fields.setCounty( true );
+		fields.setAddresLine1( true );
+		fields.setAddresLine2( true );
+end
+
+//from row number: 7
+rule "Row 7 FieldsByPackage"
+	dialect "mvel"
+	when
+		fields : FieldsByPackage( package == "bankData" , program == "Motiva" )
+	then
+		fields.setFirstName( false );
+		fields.setMiddleName( false );
+		fields.setLastName( false );
+		fields.setSecondLastName( false );
+		fields.setEmail( false );
+		fields.setBirthDate( false );
+		fields.setCountry( false );
+		fields.setState( false );
+		fields.setCity( false );
+		fields.setColony( false );
+		fields.setAddressType( false );
+		fields.setZipCode( false );
+		fields.setStreetAddress( false );
+		fields.setInteriorNumber( false );
+		fields.setExteriorNumber( false );
+		fields.setPhoneNumber( false );
+		fields.setUseType( false );
+		fields.setCardHolder( true );
+		fields.setCardType( true );
+		fields.setCvvNumber( true );
+		fields.setInteriorNum( false );
+		fields.setExternalNum( false );
+		fields.setNameCompany( false );
+		fields.setCounty( false );
+		fields.setAddresLine1( false );
+		fields.setAddresLine2( false );
+end
+
+//from row number: 8
+rule "Row 8 FieldsByPackage"
+	dialect "mvel"
+	when
+		fields : FieldsByPackage( package == "telephone" , program == "Motiva" )
+	then
+		fields.setFirstName( false );
+		fields.setMiddleName( false );
+		fields.setLastName( false );
+		fields.setSecondLastName( false );
+		fields.setEmail( false );
+		fields.setBirthDate( false );
+		fields.setCountry( false );
+		fields.setState( false );
+		fields.setCity( false );
+		fields.setColony( false );
+		fields.setAddressType( false );
+		fields.setZipCode( false );
+		fields.setStreetAddress( false );
+		fields.setInteriorNumber( false );
+		fields.setExteriorNumber( false );
+		fields.setPhoneNumber( true );
+		fields.setUseType( true );
+		fields.setCardHolder( false );
+		fields.setCardType( false );
+		fields.setCvvNumber( false );
+		fields.setInteriorNum( false );
+		fields.setExternalNum( false );
+		fields.setNameCompany( false );
+		fields.setCounty( false );
+		fields.setAddresLine1( false );
+		fields.setAddresLine2( false );
+end
+
+//from row number: 9
+rule "Row 9 FieldsByPackage"
+	dialect "mvel"
+	when
+		fields : FieldsByPackage( package == "customerData" , program == "Fiesta Rewards" )
+	then
+		fields.setFirstName( true );
+		fields.setMiddleName( true );
+		fields.setLastName( true );
+		fields.setSecondLastName( true );
+		fields.setEmail( true );
+		fields.setBirthDate( true );
+		fields.setCountry( false );
+		fields.setState( false );
+		fields.setCity( false );
+		fields.setColony( false );
+		fields.setAddressType( false );
+		fields.setZipCode( false );
+		fields.setStreetAddress( false );
+		fields.setInteriorNumber( false );
+		fields.setExteriorNumber( false );
+		fields.setPhoneNumber( false );
+		fields.setUseType( false );
+		fields.setCardHolder( false );
+		fields.setCardType( false );
+		fields.setCvvNumber( false );
+		fields.setInteriorNum( false );
+		fields.setExternalNum( false );
+		fields.setNameCompany( false );
+		fields.setCounty( false );
+		fields.setAddresLine1( false );
+		fields.setAddresLine2( false );
+end
+
+//from row number: 10
+rule "Row 10 FieldsByPackage"
+	dialect "mvel"
+	when
+		fields : FieldsByPackage( package == "address" , program == "Fiesta Rewards" )
+	then
+		fields.setFirstName( false );
+		fields.setMiddleName( false );
+		fields.setLastName( false );
+		fields.setSecondLastName( false );
+		fields.setEmail( false );
+		fields.setBirthDate( false );
+		fields.setCountry( true );
+		fields.setState( true );
+		fields.setCity( true );
+		fields.setColony( true );
+		fields.setAddressType( true );
+		fields.setZipCode( true );
+		fields.setStreetAddress( true );
+		fields.setInteriorNumber( true );
+		fields.setExteriorNumber( true );
+		fields.setPhoneNumber( false );
+		fields.setUseType( false );
+		fields.setCardHolder( false );
+		fields.setCardType( false );
+		fields.setCvvNumber( false );
+		fields.setInteriorNum( true );
+		fields.setExternalNum( true );
+		fields.setNameCompany( false );
+		fields.setCounty( true );
+		fields.setAddresLine1( true );
+		fields.setAddresLine2( true );
+end
+
+//from row number: 11
+rule "Row 11 FieldsByPackage"
+	dialect "mvel"
+	when
+		fields : FieldsByPackage( package == "bankData" , program == "Fiesta Rewards" )
+	then
+		fields.setFirstName( false );
+		fields.setMiddleName( false );
+		fields.setLastName( false );
+		fields.setSecondLastName( false );
+		fields.setEmail( false );
+		fields.setBirthDate( false );
+		fields.setCountry( false );
+		fields.setState( false );
+		fields.setCity( false );
+		fields.setColony( false );
+		fields.setAddressType( false );
+		fields.setZipCode( false );
+		fields.setStreetAddress( false );
+		fields.setInteriorNumber( false );
+		fields.setExteriorNumber( false );
+		fields.setPhoneNumber( false );
+		fields.setUseType( false );
+		fields.setCardHolder( true );
+		fields.setCardType( true );
+		fields.setCvvNumber( true );
+		fields.setInteriorNum( false );
+		fields.setExternalNum( false );
+		fields.setNameCompany( false );
+		fields.setCounty( false );
+		fields.setAddresLine1( false );
+		fields.setAddresLine2( false );
+end
+
+//from row number: 12
+rule "Row 12 FieldsByPackage"
+	dialect "mvel"
+	when
+		fields : FieldsByPackage( package == "telephone" , program == "Fiesta Rewards" )
+	then
+		fields.setFirstName( false );
+		fields.setMiddleName( false );
+		fields.setLastName( false );
+		fields.setSecondLastName( false );
+		fields.setEmail( false );
+		fields.setBirthDate( false );
+		fields.setCountry( false );
+		fields.setState( false );
+		fields.setCity( false );
+		fields.setColony( false );
+		fields.setAddressType( false );
+		fields.setZipCode( false );
+		fields.setStreetAddress( false );
+		fields.setInteriorNumber( false );
+		fields.setExteriorNumber( false );
+		fields.setPhoneNumber( true );
+		fields.setUseType( true );
+		fields.setCardHolder( false );
+		fields.setCardType( false );
+		fields.setCvvNumber( false );
+		fields.setInteriorNum( false );
+		fields.setExternalNum( false );
+		fields.setNameCompany( false );
+		fields.setCounty( false );
+		fields.setAddresLine1( false );
+		fields.setAddresLine2( false );
+end
+
+
+
+//from row number: 1
+rule "Row 1 RestrictionsByField"
+	dialect "mvel"
+	when
+		restrictions : RestrictionsByField( name == "firstName" , program == "Apreciare" )
+	then
+		restrictions.setRequired( true );
+		restrictions.setRegexp( "^[A-Za-zÑñÁáÉéÍíÓóÚú ]+$" );
+end
+
+//from row number: 2
+rule "Row 2 RestrictionsByField"
+	dialect "mvel"
+	when
+		restrictions : RestrictionsByField( name == "middleName" , program == "Apreciare" )
+	then
+		restrictions.setRequired( false );
+		restrictions.setRegexp( "^[A-Za-zÑñÁáÉéÍíÓóÚú ]+$" );
+end
+
+//from row number: 3
+rule "Row 3 RestrictionsByField"
+	dialect "mvel"
+	when
+		restrictions : RestrictionsByField( name == "lastName" , program == "Apreciare" )
+	then
+		restrictions.setRequired( true );
+		restrictions.setRegexp( "^[A-Za-zÑñÁáÉéÍíÓóÚú ]+$" );
+end
+
+//from row number: 4
+rule "Row 4 RestrictionsByField"
+	dialect "mvel"
+	when
+		restrictions : RestrictionsByField( name == "secondLastName" , program == "Apreciare" )
+	then
+		restrictions.setRequired( false );
+		restrictions.setRegexp( "^[A-Za-zÑñÁáÉéÍíÓóÚú ]+$" );
+end
+
+//from row number: 5
+rule "Row 5 RestrictionsByField"
+	dialect "mvel"
+	when
+		restrictions : RestrictionsByField( name == "email" , program == "Apreciare" )
+	then
+		restrictions.setRequired( true );
+		restrictions.setRegexp( "^[_a-z0-9-]+(\\.[_a-z0-9-]+)*@[a-z0-9-]+(\\.[a-z0-9-]+)*(\\.[a-z]{2,3})$" );
+end
+
+//from row number: 6
+rule "Row 6 RestrictionsByField"
+	dialect "mvel"
+	when
+		restrictions : RestrictionsByField( name == "brithDate" , program == "Apreciare" )
+	then
+		restrictions.setRequired( true );
+		restrictions.setRegexp( "^[0-9][0-9]/[0-9][0-9]/[0-9][0-9][0-9][0-9]$" );
+end
+
+//from row number: 7
+rule "Row 7 RestrictionsByField"
+	dialect "mvel"
+	when
+		restrictions : RestrictionsByField( name == "state" , program == "Apreciare" )
+	then
+		restrictions.setRequired( true );
+		restrictions.setRegexp( "^[A-Za-z0-9ÑñÁáÉéÍíÓóÚú ]+$" );
+end
+
+//from row number: 8
+rule "Row 8 RestrictionsByField"
+	dialect "mvel"
+	when
+		restrictions : RestrictionsByField( name == "city" , program == "Apreciare" )
+	then
+		restrictions.setRequired( true );
+		restrictions.setRegexp( "^[A-Za-z0-9ÑñÁáÉéÍíÓóÚú ]+$" );
+end
+
+//from row number: 9
+rule "Row 9 RestrictionsByField"
+	dialect "mvel"
+	when
+		restrictions : RestrictionsByField( name == "county" , program == "Apreciare" )
+	then
+		restrictions.setRequired( true );
+		restrictions.setRegexp( "^[A-Za-z0-9ÑñÁáÉéÍíÓóÚú. ]+$" );
+end
+
+//from row number: 10
+rule "Row 10 RestrictionsByField"
+	dialect "mvel"
+	when
+		restrictions : RestrictionsByField( name == "colony" , program == "Apreciare" )
+	then
+		restrictions.setRequired( true );
+		restrictions.setRegexp( "^[A-Za-z0-9ÑñÁáÉéÍíÓóÚú. ]+$" );
+end
+
+//from row number: 11
+rule "Row 11 RestrictionsByField"
+	dialect "mvel"
+	when
+		restrictions : RestrictionsByField( name == "zipCode" , program == "Apreciare" )
+	then
+		restrictions.setRequired( true );
+		restrictions.setRegexp( "^[0-9]+$" );
+end
+
+//from row number: 12
+rule "Row 12 RestrictionsByField"
+	dialect "mvel"
+	when
+		restrictions : RestrictionsByField( name == "streetAddress" , program == "Apreciare" )
+	then
+		restrictions.setRequired( true );
+		restrictions.setRegexp( "^[A-Za-z0-9ÑñÁáÉéÍíÓóÚú ]+$" );
+end
+
+//from row number: 13
+rule "Row 13 RestrictionsByField"
+	dialect "mvel"
+	when
+		restrictions : RestrictionsByField( name == "addressType" , program == "Apreciare" )
+	then
+		restrictions.setRequired( true );
+		restrictions.setRegexp( "^Home|Office|Shipment$" );
+end
+
+//from row number: 14
+rule "Row 14 RestrictionsByField"
+	dialect "mvel"
+	when
+		restrictions : RestrictionsByField( name == "interiorNum" , program == "Apreciare" )
+	then
+		restrictions.setRequired( false );
+		restrictions.setRegexp( "^[A-Za-z0-9 ]+$" );
+end
+
+//from row number: 15
+rule "Row 15 RestrictionsByField"
+	dialect "mvel"
+	when
+		restrictions : RestrictionsByField( name == "externalNum" , program == "Apreciare" )
+	then
+		restrictions.setRequired( true );
+		restrictions.setRegexp( "^[A-Za-z0-9 ]+$" );
+end
+
+//from row number: 16
+rule "Row 16 RestrictionsByField"
+	dialect "mvel"
+	when
+		restrictions : RestrictionsByField( name == "useType" , program == "Apreciare" )
+	then
+		restrictions.setRequired( true );
+		restrictions.setRegexp( "^Home|Office|Cellphone$" );
+end
+
+//from row number: 17
+rule "Row 17 RestrictionsByField"
+	dialect "mvel"
+	when
+		restrictions : RestrictionsByField( name == "phoneNumber" , program == "Apreciare" )
+	then
+		restrictions.setRequired( true );
+		restrictions.setRegexp( "^[0-9]{10}$" );
+end
+
+//from row number: 18
+rule "Row 18 RestrictionsByField"
+	dialect "mvel"
+	when
+		restrictions : RestrictionsByField( name == "firstName" , program == "Motiva" )
+	then
+		restrictions.setRequired( true );
+		restrictions.setRegexp( "^[A-Za-zÑñÁáÉéÍíÓóÚú ]+$" );
+end
+
+//from row number: 19
+rule "Row 19 RestrictionsByField"
+	dialect "mvel"
+	when
+		restrictions : RestrictionsByField( name == "middleName" , program == "Motiva" )
+	then
+		restrictions.setRequired( false );
+		restrictions.setRegexp( "^[A-Za-zÑñÁáÉéÍíÓóÚú ]+$" );
+end
+
+//from row number: 20
+rule "Row 20 RestrictionsByField"
+	dialect "mvel"
+	when
+		restrictions : RestrictionsByField( name == "lastName" , program == "Motiva" )
+	then
+		restrictions.setRequired( true );
+		restrictions.setRegexp( "^[A-Za-zÑñÁáÉéÍíÓóÚú ]+$" );
+end
+
+//from row number: 21
+rule "Row 21 RestrictionsByField"
+	dialect "mvel"
+	when
+		restrictions : RestrictionsByField( name == "secondLastName" , program == "Motiva" )
+	then
+		restrictions.setRequired( false );
+		restrictions.setRegexp( "^[A-Za-zÑñÁáÉéÍíÓóÚú ]+$" );
+end
+
+//from row number: 22
+rule "Row 22 RestrictionsByField"
+	dialect "mvel"
+	when
+		restrictions : RestrictionsByField( name == "email" , program == "Motiva" )
+	then
+		restrictions.setRequired( true );
+		restrictions.setRegexp( "^[_a-z0-9-]+(\\.[_a-z0-9-]+)*@[a-z0-9-]+(\\.[a-z0-9-]+)*(\\.[a-z]{2,3})$" );
+end
+
+//from row number: 23
+rule "Row 23 RestrictionsByField"
+	dialect "mvel"
+	when
+		restrictions : RestrictionsByField( name == "brithDate" , program == "Motiva" )
+	then
+		restrictions.setRequired( true );
+		restrictions.setRegexp( "^[0-9][0-9]/[0-9][0-9]/[0-9][0-9][0-9][0-9]$" );
+end
+
+//from row number: 24
+rule "Row 24 RestrictionsByField"
+	dialect "mvel"
+	when
+		restrictions : RestrictionsByField( name == "state" , program == "Motiva" )
+	then
+		restrictions.setRequired( true );
+		restrictions.setRegexp( "^[A-Za-z0-9ÑñÁáÉéÍíÓóÚú ]+$" );
+end
+
+//from row number: 25
+rule "Row 25 RestrictionsByField"
+	dialect "mvel"
+	when
+		restrictions : RestrictionsByField( name == "city" , program == "Motiva" )
+	then
+		restrictions.setRequired( true );
+		restrictions.setRegexp( "^[A-Za-z0-9ÑñÁáÉéÍíÓóÚú ]+$" );
+end
+
+//from row number: 26
+rule "Row 26 RestrictionsByField"
+	dialect "mvel"
+	when
+		restrictions : RestrictionsByField( name == "county" , program == "Motiva" )
+	then
+		restrictions.setRequired( true );
+		restrictions.setRegexp( "^[A-Za-z0-9ÑñÁáÉéÍíÓóÚú. ]+$" );
+end
+
+//from row number: 27
+rule "Row 27 RestrictionsByField"
+	dialect "mvel"
+	when
+		restrictions : RestrictionsByField( name == "colony" , program == "Motiva" )
+	then
+		restrictions.setRequired( true );
+		restrictions.setRegexp( "^[A-Za-z0-9ÑñÁáÉéÍíÓóÚú. ]+$" );
+end
+
+//from row number: 28
+rule "Row 28 RestrictionsByField"
+	dialect "mvel"
+	when
+		restrictions : RestrictionsByField( name == "zipCode" , program == "Motiva" )
+	then
+		restrictions.setRequired( true );
+		restrictions.setRegexp( "^[0-9]+$" );
+end
+
+//from row number: 29
+rule "Row 29 RestrictionsByField"
+	dialect "mvel"
+	when
+		restrictions : RestrictionsByField( name == "streetAddress" , program == "Motiva" )
+	then
+		restrictions.setRequired( true );
+		restrictions.setRegexp( "^[A-Za-z0-9ÑñÁáÉéÍíÓóÚú ]+$" );
+end
+
+//from row number: 30
+rule "Row 30 RestrictionsByField"
+	dialect "mvel"
+	when
+		restrictions : RestrictionsByField( name == "addressType" , program == "Motiva" )
+	then
+		restrictions.setRequired( true );
+		restrictions.setRegexp( "^Home|Office|Shipment$" );
+end
+
+//from row number: 31
+rule "Row 31 RestrictionsByField"
+	dialect "mvel"
+	when
+		restrictions : RestrictionsByField( name == "interiorNum" , program == "Motiva" )
+	then
+		restrictions.setRequired( false );
+		restrictions.setRegexp( "^[A-Za-z0-9 ]+$" );
+end
+
+//from row number: 32
+rule "Row 32 RestrictionsByField"
+	dialect "mvel"
+	when
+		restrictions : RestrictionsByField( name == "externalNum" , program == "Motiva" )
+	then
+		restrictions.setRequired( true );
+		restrictions.setRegexp( "^[A-Za-z0-9 ]+$" );
+end
+
+//from row number: 33
+rule "Row 33 RestrictionsByField"
+	dialect "mvel"
+	when
+		restrictions : RestrictionsByField( name == "useType" , program == "Motiva" )
+	then
+		restrictions.setRequired( true );
+		restrictions.setRegexp( "^Home|Office|Cellphone$" );
+end
+
+//from row number: 34
+rule "Row 34 RestrictionsByField"
+	dialect "mvel"
+	when
+		restrictions : RestrictionsByField( name == "phoneNumber" , program == "Motiva" )
+	then
+		restrictions.setRequired( true );
+		restrictions.setRegexp( "^[0-9]{10}$" );
+end
+
+//from row number: 35
+rule "Row 35 RestrictionsByField"
+	dialect "mvel"
+	when
+		restrictions : RestrictionsByField( name == "firstName" , program == "Fiesta Rewards" )
+	then
+		restrictions.setRequired( true );
+		restrictions.setRegexp( "^[A-Za-zÑñÁáÉéÍíÓóÚú ]+$" );
+end
+
+//from row number: 36
+rule "Row 36 RestrictionsByField"
+	dialect "mvel"
+	when
+		restrictions : RestrictionsByField( name == "middleName" , program == "Fiesta Rewards" )
+	then
+		restrictions.setRequired( false );
+		restrictions.setRegexp( "^[A-Za-zÑñÁáÉéÍíÓóÚú ]+$" );
+end
+
+//from row number: 37
+rule "Row 37 RestrictionsByField"
+	dialect "mvel"
+	when
+		restrictions : RestrictionsByField( name == "lastName" , program == "Fiesta Rewards" )
+	then
+		restrictions.setRequired( true );
+		restrictions.setRegexp( "^[A-Za-zÑñÁáÉéÍíÓóÚú ]+$" );
+end
+
+//from row number: 38
+rule "Row 38 RestrictionsByField"
+	dialect "mvel"
+	when
+		restrictions : RestrictionsByField( name == "secondLastName" , program == "Fiesta Rewards" )
+	then
+		restrictions.setRequired( false );
+		restrictions.setRegexp( "^[A-Za-zÑñÁáÉéÍíÓóÚú ]+$" );
+end
+
+//from row number: 39
+rule "Row 39 RestrictionsByField"
+	dialect "mvel"
+	when
+		restrictions : RestrictionsByField( name == "email" , program == "Fiesta Rewards" )
+	then
+		restrictions.setRequired( true );
+		restrictions.setRegexp( "^[_a-z0-9-]+(\\.[_a-z0-9-]+)*@[a-z0-9-]+(\\.[a-z0-9-]+)*(\\.[a-z]{2,3})$" );
+end
+
+//from row number: 40
+rule "Row 40 RestrictionsByField"
+	dialect "mvel"
+	when
+		restrictions : RestrictionsByField( name == "brithDate" , program == "Fiesta Rewards" )
+	then
+		restrictions.setRequired( true );
+		restrictions.setRegexp( "^[0-9][0-9]/[0-9][0-9]/[0-9][0-9][0-9][0-9]$" );
+end
+
+//from row number: 41
+rule "Row 41 RestrictionsByField"
+	dialect "mvel"
+	when
+		restrictions : RestrictionsByField( name == "state" , program == "Fiesta Rewards" )
+	then
+		restrictions.setRequired( true );
+		restrictions.setRegexp( "^[A-Za-z0-9ÑñÁáÉéÍíÓóÚú ]+$" );
+end
+
+//from row number: 42
+rule "Row 42 RestrictionsByField"
+	dialect "mvel"
+	when
+		restrictions : RestrictionsByField( name == "city" , program == "Fiesta Rewards" )
+	then
+		restrictions.setRequired( true );
+		restrictions.setRegexp( "^[A-Za-z0-9ÑñÁáÉéÍíÓóÚú ]+$" );
+end
+
+//from row number: 43
+rule "Row 43 RestrictionsByField"
+	dialect "mvel"
+	when
+		restrictions : RestrictionsByField( name == "county" , program == "Fiesta Rewards" )
+	then
+		restrictions.setRequired( true );
+		restrictions.setRegexp( "^[A-Za-z0-9ÑñÁáÉéÍíÓóÚú ]+$" );
+end
+
+//from row number: 44
+rule "Row 44 RestrictionsByField"
+	dialect "mvel"
+	when
+		restrictions : RestrictionsByField( name == "colony" , program == "Fiesta Rewards" )
+	then
+		restrictions.setRequired( true );
+		restrictions.setRegexp( "^[A-Za-z0-9ÑñÁáÉéÍíÓóÚú. ]+$" );
+end
+
+//from row number: 45
+rule "Row 45 RestrictionsByField"
+	dialect "mvel"
+	when
+		restrictions : RestrictionsByField( name == "zipCode" , program == "Fiesta Rewards" )
+	then
+		restrictions.setRequired( true );
+		restrictions.setRegexp( "^[A-Za-z0-9]+$" );
+end
+
+//from row number: 46
+rule "Row 46 RestrictionsByField"
+	dialect "mvel"
+	when
+		restrictions : RestrictionsByField( name == "streetAddress" , program == "Fiesta Rewards" )
+	then
+		restrictions.setRequired( true );
+		restrictions.setRegexp( "^[A-Za-z0-9ÑñÁáÉéÍíÓóÚú ]+$" );
+end
+
+//from row number: 47
+rule "Row 47 RestrictionsByField"
+	dialect "mvel"
+	when
+		restrictions : RestrictionsByField( name == "addressType" , program == "Fiesta Rewards" )
+	then
+		restrictions.setRequired( true );
+		restrictions.setRegexp( "^Home|Office|Shipment$" );
+end
+
+//from row number: 48
+rule "Row 48 RestrictionsByField"
+	dialect "mvel"
+	when
+		restrictions : RestrictionsByField( name == "interiorNum" , program == "Fiesta Rewards" )
+	then
+		restrictions.setRequired( false );
+		restrictions.setRegexp( "^[A-Za-z0-9 ]+$" );
+end
+
+//from row number: 49
+rule "Row 49 RestrictionsByField"
+	dialect "mvel"
+	when
+		restrictions : RestrictionsByField( name == "externalNum" , program == "Fiesta Rewards" )
+	then
+		restrictions.setRequired( true );
+		restrictions.setRegexp( "^[A-Za-z0-9 ]+$" );
+end
+
+//from row number: 50
+rule "Row 50 RestrictionsByField"
+	dialect "mvel"
+	when
+		restrictions : RestrictionsByField( name == "useType" , program == "Fiesta Rewards" )
+	then
+		restrictions.setRequired( true );
+		restrictions.setRegexp( "^Home|Office|Cellphone$" );
+end
+
+//from row number: 51
+rule "Row 51 RestrictionsByField"
+	dialect "mvel"
+	when
+		restrictions : RestrictionsByField( name == "phoneNumber" , program == "Fiesta Rewards" )
+	then
+		restrictions.setRequired( true );
+		restrictions.setRegexp( "^[0-9]{10}$" );
+end
+
+
+
+//from row number: 1
+rule "Row 1 Messages"
+	dialect "mvel"
+	when
+		messages : Messages( program == "Apreciare" , locale == "es_ES" , field == "firstName" )
+	then
+		messages.setError( "No se aceptan números ni caracteres especiales en el primer nombre." );
+end
+
+//from row number: 2
+rule "Row 2 Messages"
+	dialect "mvel"
+	when
+		messages : Messages( program == "Apreciare" , locale == "es_ES" , field == "middleName" )
+	then
+		messages.setError( "No se aceptan números ni caracteres especiales en el segundo nombre." );
+end
+
+//from row number: 3
+rule "Row 3 Messages"
+	dialect "mvel"
+	when
+		messages : Messages( program == "Apreciare" , locale == "es_ES" , field == "lastName" )
+	then
+		messages.setError( "No se aceptan números ni caracteres especiales en el apellido paterno." );
+end
+
+//from row number: 4
+rule "Row 4 Messages"
+	dialect "mvel"
+	when
+		messages : Messages( program == "Apreciare" , locale == "es_ES" , field == "secondLastName" )
+	then
+		messages.setError( "No se aceptan números ni caracteres especiales en el apellido materno." );
+end
+
+//from row number: 5
+rule "Row 5 Messages"
+	dialect "mvel"
+	when
+		messages : Messages( program == "Apreciare" , locale == "es_ES" , field == "email" )
+	then
+		messages.setError( "No es un correo electrónico válido." );
+end
+
+//from row number: 6
+rule "Row 6 Messages"
+	dialect "mvel"
+	when
+		messages : Messages( program == "Apreciare" , locale == "es_ES" , field == "brithDate" )
+	then
+		messages.setError( "Fecha de nacimiento no válida. El formato debe estar en formato dd/mm/aaaa." );
+end
+
+//from row number: 7
+rule "Row 7 Messages"
+	dialect "mvel"
+	when
+		messages : Messages( program == "Apreciare" , locale == "es_ES" , field == "country" )
+	then
+		messages.setError( "No es un país válido." );
+end
+
+//from row number: 8
+rule "Row 8 Messages"
+	dialect "mvel"
+	when
+		messages : Messages( program == "Apreciare" , locale == "es_ES" , field == "state" )
+	then
+		messages.setError( "No se aceptan caracteres especiales en el estado." );
+end
+
+//from row number: 9
+rule "Row 9 Messages"
+	dialect "mvel"
+	when
+		messages : Messages( program == "Apreciare" , locale == "es_ES" , field == "city" )
+	then
+		messages.setError( "No se aceptan caracteres especiales en la ciudad." );
+end
+
+//from row number: 10
+rule "Row 10 Messages"
+	dialect "mvel"
+	when
+		messages : Messages( program == "Apreciare" , locale == "es_ES" , field == "colony" )
+	then
+		messages.setError( "No se aceptan caracteres especiales en la colonia." );
+end
+
+//from row number: 11
+rule "Row 11 Messages"
+	dialect "mvel"
+	when
+		messages : Messages( program == "Apreciare" , locale == "es_ES" , field == "zipCode" )
+	then
+		messages.setError( "El código postal debe ser numérico." );
+end
+
+//from row number: 12
+rule "Row 12 Messages"
+	dialect "mvel"
+	when
+		messages : Messages( program == "Apreciare" , locale == "es_ES" , field == "streetAddress" )
+	then
+		messages.setError( "No se aceptan caracteres especiales en la calle." );
+end
+
+//from row number: 13
+rule "Row 13 Messages"
+	dialect "mvel"
+	when
+		messages : Messages( program == "Apreciare" , locale == "es_ES" , field == "interiorNum" )
+	then
+		messages.setError( "No se aceptan caracteres especiales en el número interior." );
+end
+
+//from row number: 14
+rule "Row 14 Messages"
+	dialect "mvel"
+	when
+		messages : Messages( program == "Apreciare" , locale == "es_ES" , field == "externalNum" )
+	then
+		messages.setError( "No se aceptan caracteres especiales en el número exterior." );
+end
+
+//from row number: 15
+rule "Row 15 Messages"
+	dialect "mvel"
+	when
+		messages : Messages( program == "Apreciare" , locale == "es_ES" , field == "phoneNumber" )
+	then
+		messages.setError( "El número telefónico debe de ser de 10 dígitos y sin guiones ni espacios." );
+end
+
+//from row number: 16
+rule "Row 16 Messages"
+	dialect "mvel"
+	when
+		messages : Messages( program == "Motiva" , locale == "es_ES" , field == "firstName" )
+	then
+		messages.setError( "No se aceptan números ni caracteres especiales en el primer nombre." );
+end
+
+//from row number: 17
+rule "Row 17 Messages"
+	dialect "mvel"
+	when
+		messages : Messages( program == "Motiva" , locale == "es_ES" , field == "middleName" )
+	then
+		messages.setError( "No se aceptan números ni caracteres especiales en el segundo nombre." );
+end
+
+//from row number: 18
+rule "Row 18 Messages"
+	dialect "mvel"
+	when
+		messages : Messages( program == "Motiva" , locale == "es_ES" , field == "lastName" )
+	then
+		messages.setError( "No se aceptan números ni caracteres especiales en el apellido paterno." );
+end
+
+//from row number: 19
+rule "Row 19 Messages"
+	dialect "mvel"
+	when
+		messages : Messages( program == "Motiva" , locale == "es_ES" , field == "secondLastName" )
+	then
+		messages.setError( "No se aceptan números ni caracteres especiales en el apellido materno." );
+end
+
+//from row number: 20
+rule "Row 20 Messages"
+	dialect "mvel"
+	when
+		messages : Messages( program == "Motiva" , locale == "es_ES" , field == "email" )
+	then
+		messages.setError( "No es un correo electrónico válido." );
+end
+
+//from row number: 21
+rule "Row 21 Messages"
+	dialect "mvel"
+	when
+		messages : Messages( program == "Motiva" , locale == "es_ES" , field == "brithDate" )
+	then
+		messages.setError( "Fecha de nacimiento no válida. El formato debe estar en formato dd/mm/aaaa." );
+end
+
+//from row number: 22
+rule "Row 22 Messages"
+	dialect "mvel"
+	when
+		messages : Messages( program == "Motiva" , locale == "es_ES" , field == "country" )
+	then
+		messages.setError( "No es un país válido." );
+end
+
+//from row number: 23
+rule "Row 23 Messages"
+	dialect "mvel"
+	when
+		messages : Messages( program == "Motiva" , locale == "es_ES" , field == "state" )
+	then
+		messages.setError( "No se aceptan caracteres especiales en el estado." );
+end
+
+//from row number: 24
+rule "Row 24 Messages"
+	dialect "mvel"
+	when
+		messages : Messages( program == "Motiva" , locale == "es_ES" , field == "city" )
+	then
+		messages.setError( "No se aceptan caracteres especiales en la ciudad." );
+end
+
+//from row number: 25
+rule "Row 25 Messages"
+	dialect "mvel"
+	when
+		messages : Messages( program == "Motiva" , locale == "es_ES" , field == "colony" )
+	then
+		messages.setError( "No se aceptan caracteres especiales en la colonia." );
+end
+
+//from row number: 26
+rule "Row 26 Messages"
+	dialect "mvel"
+	when
+		messages : Messages( program == "Motiva" , locale == "es_ES" , field == "zipCode" )
+	then
+		messages.setError( "El código postal debe ser numérico." );
+end
+
+//from row number: 27
+rule "Row 27 Messages"
+	dialect "mvel"
+	when
+		messages : Messages( program == "Motiva" , locale == "es_ES" , field == "streetAddress" )
+	then
+		messages.setError( "No se aceptan caracteres especiales en la calle." );
+end
+
+//from row number: 28
+rule "Row 28 Messages"
+	dialect "mvel"
+	when
+		messages : Messages( program == "Motiva" , locale == "es_ES" , field == "interiorNum" )
+	then
+		messages.setError( "No se aceptan caracteres especiales en el número interior." );
+end
+
+//from row number: 29
+rule "Row 29 Messages"
+	dialect "mvel"
+	when
+		messages : Messages( program == "Motiva" , locale == "es_ES" , field == "externalNum" )
+	then
+		messages.setError( "No se aceptan caracteres especiales en el número exterior." );
+end
+
+//from row number: 30
+rule "Row 30 Messages"
+	dialect "mvel"
+	when
+		messages : Messages( program == "Motiva" , locale == "es_ES" , field == "phoneNumber" )
+	then
+		messages.setError( "El número telefónico debe de ser de 10 dígitos y sin guiones ni espacios." );
+end
+
+//from row number: 31
+rule "Row 31 Messages"
+	dialect "mvel"
+	when
+		messages : Messages( program == "Fiesta Rewards" , locale == "es_ES" , field == "firstName" )
+	then
+		messages.setError( "No se aceptan números ni caracteres especiales en el primer nombre." );
+end
+
+//from row number: 32
+rule "Row 32 Messages"
+	dialect "mvel"
+	when
+		messages : Messages( program == "Fiesta Rewards" , locale == "en_US" , field == "firstName" )
+	then
+		messages.setError( "Numbers or special characters in the first name are not accepted." );
+end
+
+//from row number: 33
+rule "Row 33 Messages"
+	dialect "mvel"
+	when
+		messages : Messages( program == "Fiesta Rewards" , locale == "es_ES" , field == "middleName" )
+	then
+		messages.setError( "No se aceptan números ni caracteres especiales en el segundo nombre." );
+end
+
+//from row number: 34
+rule "Row 34 Messages"
+	dialect "mvel"
+	when
+		messages : Messages( program == "Fiesta Rewards" , locale == "en_US" , field == "middleName" )
+	then
+		messages.setError( "Numbers or special characters in the middle name are not accepted." );
+end
+
+//from row number: 35
+rule "Row 35 Messages"
+	dialect "mvel"
+	when
+		messages : Messages( program == "Fiesta Rewards" , locale == "es_ES" , field == "lastName" )
+	then
+		messages.setError( "No se aceptan números ni caracteres especiales en el apellido paterno." );
+end
+
+//from row number: 36
+rule "Row 36 Messages"
+	dialect "mvel"
+	when
+		messages : Messages( program == "Fiesta Rewards" , locale == "en_US" , field == "lastName" )
+	then
+		messages.setError( "Numbers or special characters in the last name are not accepted." );
+end
+
+//from row number: 37
+rule "Row 37 Messages"
+	dialect "mvel"
+	when
+		messages : Messages( program == "Fiesta Rewards" , locale == "es_ES" , field == "secondLastName" )
+	then
+		messages.setError( "No se aceptan números ni caracteres especiales en el apellido materno." );
+end
+
+//from row number: 38
+rule "Row 38 Messages"
+	dialect "mvel"
+	when
+		messages : Messages( program == "Fiesta Rewards" , locale == "en_US" , field == "secondLastName" )
+	then
+		messages.setError( "Numbers or special characters in the second last name are not accepted." );
+end
+
+//from row number: 39
+rule "Row 39 Messages"
+	dialect "mvel"
+	when
+		messages : Messages( program == "Fiesta Rewards" , locale == "es_ES" , field == "email" )
+	then
+		messages.setError( "No es un correo electrónico válido." );
+end
+
+//from row number: 40
+rule "Row 40 Messages"
+	dialect "mvel"
+	when
+		messages : Messages( program == "Fiesta Rewards" , locale == "en_US" , field == "email" )
+	then
+		messages.setError( "This is not a valid email." );
+end
+
+//from row number: 41
+rule "Row 41 Messages"
+	dialect "mvel"
+	when
+		messages : Messages( program == "Fiesta Rewards" , locale == "es_ES" , field == "brithDate" )
+	then
+		messages.setError( "Fecha de nacimiento no válida. El formato debe estar en formato dd/mm/aaaa." );
+end
+
+//from row number: 42
+rule "Row 42 Messages"
+	dialect "mvel"
+	when
+		messages : Messages( program == "Fiesta Rewards" , locale == "en_US" , field == "brithDate" )
+	then
+		messages.setError( "Invalid birth date. The format should be dd/mm/yyyy." );
+end
+
+//from row number: 43
+rule "Row 43 Messages"
+	dialect "mvel"
+	when
+		messages : Messages( program == "Fiesta Rewards" , locale == "es_ES" , field == "country" )
+	then
+		messages.setError( "No es un país válido." );
+end
+
+//from row number: 44
+rule "Row 44 Messages"
+	dialect "mvel"
+	when
+		messages : Messages( program == "Fiesta Rewards" , locale == "en_US" , field == "country" )
+	then
+		messages.setError( "This is not a valid country." );
+end
+
+//from row number: 45
+rule "Row 45 Messages"
+	dialect "mvel"
+	when
+		messages : Messages( program == "Fiesta Rewards" , locale == "es_ES" , field == "state" )
+	then
+		messages.setError( "No se aceptan caracteres especiales en el estado." );
+end
+
+//from row number: 46
+rule "Row 46 Messages"
+	dialect "mvel"
+	when
+		messages : Messages( program == "Fiesta Rewards" , locale == "en_US" , field == "state" )
+	then
+		messages.setError( "Numbers or special characters in the state are not accepted." );
+end
+
+//from row number: 47
+rule "Row 47 Messages"
+	dialect "mvel"
+	when
+		messages : Messages( program == "Fiesta Rewards" , locale == "es_ES" , field == "city" )
+	then
+		messages.setError( "No se aceptan caracteres especiales en la ciudad." );
+end
+
+//from row number: 48
+rule "Row 48 Messages"
+	dialect "mvel"
+	when
+		messages : Messages( program == "Fiesta Rewards" , locale == "en_US" , field == "city" )
+	then
+		messages.setError( "Numbers or special characters in the city are not accepted." );
+end
+
+//from row number: 49
+rule "Row 49 Messages"
+	dialect "mvel"
+	when
+		messages : Messages( program == "Fiesta Rewards" , locale == "es_ES" , field == "colony" )
+	then
+		messages.setError( "No se aceptan caracteres especiales en la colonia." );
+end
+
+//from row number: 50
+rule "Row 50 Messages"
+	dialect "mvel"
+	when
+		messages : Messages( program == "Fiesta Rewards" , locale == "en_US" , field == "colony" )
+	then
+		messages.setError( "Numbers or special characters in the colony are not accepted." );
+end
+
+//from row number: 51
+rule "Row 51 Messages"
+	dialect "mvel"
+	when
+		messages : Messages( program == "Fiesta Rewards" , locale == "es_ES" , field == "zipCode" )
+	then
+		messages.setError( "No es un código postal válido." );
+end
+
+//from row number: 52
+rule "Row 52 Messages"
+	dialect "mvel"
+	when
+		messages : Messages( program == "Fiesta Rewards" , locale == "en_US" , field == "zipCode" )
+	then
+		messages.setError( "This is not a valid zipcode." );
+end
+
+//from row number: 53
+rule "Row 53 Messages"
+	dialect "mvel"
+	when
+		messages : Messages( program == "Fiesta Rewards" , locale == "es_ES" , field == "streetAddress" )
+	then
+		messages.setError( "No se aceptan caracteres especiales en la calle." );
+end
+
+//from row number: 54
+rule "Row 54 Messages"
+	dialect "mvel"
+	when
+		messages : Messages( program == "Fiesta Rewards" , locale == "en_US" , field == "streetAddress" )
+	then
+		messages.setError( "Special characters are not accepted in the street address." );
+end
+
+//from row number: 55
+rule "Row 55 Messages"
+	dialect "mvel"
+	when
+		messages : Messages( program == "Fiesta Rewards" , locale == "es_ES" , field == "interiorNum" )
+	then
+		messages.setError( "No se aceptan caracteres especiales en el número interior." );
+end
+
+//from row number: 56
+rule "Row 56 Messages"
+	dialect "mvel"
+	when
+		messages : Messages( program == "Fiesta Rewards" , locale == "en_US" , field == "interiorNum" )
+	then
+		messages.setError( "Special characters are not accepted in the interior number." );
+end
+
+//from row number: 57
+rule "Row 57 Messages"
+	dialect "mvel"
+	when
+		messages : Messages( program == "Fiesta Rewards" , locale == "es_ES" , field == "externalNum" )
+	then
+		messages.setError( "No se aceptan caracteres especiales en el número exterior." );
+end
+
+//from row number: 58
+rule "Row 58 Messages"
+	dialect "mvel"
+	when
+		messages : Messages( program == "Fiesta Rewards" , locale == "en_US" , field == "externalNum" )
+	then
+		messages.setError( "Special characters are not accepted in the exterior number" );
+end
+
+//from row number: 59
+rule "Row 59 Messages"
+	dialect "mvel"
+	when
+		messages : Messages( program == "Fiesta Rewards" , locale == "es_ES" , field == "phoneNumber" )
+	then
+		messages.setError( "El número telefónico debe de ser de 10 dígitos y sin guiones ni espacios." );
+end
+
+//from row number: 60
+rule "Row 60 Messages"
+	dialect "mvel"
+	when
+		messages : Messages( program == "Fiesta Rewards" , locale == "en_US" , field == "phoneNumber" )
+	then
+		messages.setError( "The phone number must be 10 digits without hyphens or spaces." );
+end
+
+
+
+
+
+//from row number: 1
+rule "Row 1 CountryByProgram"
+	dialect "mvel"
+	when
+		CountryByProgramType : CountryByProgram( program == "Apreciare" )
+	then
+		CountryByProgramType.setCountry01( "Mexico" );
+end
+
+//from row number: 2
+rule "Row 2 CountryByProgram"
+	dialect "mvel"
+	when
+		CountryByProgramType : CountryByProgram( program == "Motiva" )
+	then
+		CountryByProgramType.setCountry01( "Mexico" );
+end
+
+//from row number: 3
+rule "Row 3 CountryByProgram"
+	dialect "mvel"
+	when
+		CountryByProgramType : CountryByProgram( program == "Fiesta Rewards" )
+	then
+		CountryByProgramType.setCountry01( "México" );
+		CountryByProgramType.setCountry02( "United States of America" );
+end
+
+
