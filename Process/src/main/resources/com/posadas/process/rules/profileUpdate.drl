@@ -1,6 +1,5 @@
 package com.posadas.process.rules;
-
-import com.posadas.process.profileUpdate.*;
+import  com.posadas.process.profileUpdate.CountryByProgram;
 
 //from row number: 1
 rule "Row 1 PackagesByProgram"
@@ -1535,3 +1534,4 @@ rule "Row 3 CountryByProgram"
 end
 
 
+com.posadas.process.profileupdate.CountryByProgram( )
