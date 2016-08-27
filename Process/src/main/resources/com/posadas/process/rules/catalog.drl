@@ -1,2 +1,534 @@
 package com.posadas.process.rules;
 
+
+//from row number: 1
+rule "Row 1 CategoriesByProgram"
+	dialect "mvel"
+	when
+		CBP : CategoriesByProgram( program == "Apreciare" , locale == "es_ES" )
+	then
+		CBP.setIdCategory01( "Artículos de viaje" );
+		CBP.setIdCategory02( "Bebés y niños" );
+		CBP.setIdCategory03( "Deportes" );
+		CBP.setIdCategory04( "Donaciones" );
+		CBP.setIdCategory05( "Ellas" );
+		CBP.setIdCategory06( "Ellos" );
+		CBP.setIdCategory07( "Hogar y cocina" );
+		CBP.setIdCategory08( "Mascotas" );
+		CBP.setIdCategory09( "Monederos y certificados" );
+		CBP.setIdCategory10( "Tecnología y entretenimiento" );
+end
+
+//from row number: 2
+rule "Row 2 CategoriesByProgram"
+	dialect "mvel"
+	when
+		CBP : CategoriesByProgram( program == "Motiva" , locale == "es_ES" )
+	then
+		CBP.setIdCategory01( "Artículos de viaje" );
+		CBP.setIdCategory02( "Bebés y niños" );
+		CBP.setIdCategory03( "Deportes" );
+		CBP.setIdCategory04( "Donaciones" );
+		CBP.setIdCategory05( "Ellas" );
+		CBP.setIdCategory06( "Ellos" );
+		CBP.setIdCategory07( "Hogar y cocina" );
+		CBP.setIdCategory08( "Mascotas" );
+		CBP.setIdCategory09( "Monederos y certificados" );
+		CBP.setIdCategory10( "Tecnología y entretenimiento" );
+end
+
+//from row number: 3
+rule "Row 3 CategoriesByProgram"
+	dialect "mvel"
+	when
+		CBP : CategoriesByProgram( program == "Fiesta Rewards" , locale == "es_ES" )
+	then
+		CBP.setIdCategory01( "Artículos de viaje" );
+		CBP.setIdCategory02( "Bebés y Niños" );
+		CBP.setIdCategory03( "Deportes" );
+		CBP.setIdCategory04( "Donativos y Fundaciones" );
+		CBP.setIdCategory05( "Experiencias" );
+		CBP.setIdCategory06( "Ellas" );
+		CBP.setIdCategory07( "Ellos" );
+		CBP.setIdCategory08( "Hogar y Cocina" );
+		CBP.setIdCategory09( "Mascotas" );
+		CBP.setIdCategory10( "Monederos y Certificados" );
+		CBP.setIdCategory11( "Paga tu Anualidad Santander FR" );
+		CBP.setIdCategory12( "Servicios" );
+		CBP.setIdCategory13( "Tecnología y Entretenimiento" );
+		CBP.setIdCategory14( "Transferencia de Puntos" );
+end
+
+//from row number: 4
+rule "Row 4 CategoriesByProgram"
+	dialect "mvel"
+	when
+		CBP : CategoriesByProgram( program == "Fiesta Rewards" , locale == "en_US" )
+	then
+		CBP.setIdCategory01( "Points Transfer" );
+		CBP.setIdCategory02( "Gift Cards" );
+end
+
+
+
+
+
+//from row number: 1
+rule "Row 1 CategoryDescription"
+	dialect "mvel"
+	when
+		CD : CategoryDescription( id == "Artículos de viaje" , program == "Apreciare" )
+	then
+		CD.setName( "Artículos de viaje" );
+		CD.setIsDefault( false );
+		CD.setImage( "N/A" );
+end
+
+//from row number: 2
+rule "Row 2 CategoryDescription"
+	dialect "mvel"
+	when
+		CD : CategoryDescription( id == "Bebés y niños" , program == "Apreciare" )
+	then
+		CD.setName( "Bebés y niños" );
+		CD.setIsDefault( false );
+		CD.setImage( "N/A" );
+end
+
+//from row number: 3
+rule "Row 3 CategoryDescription"
+	dialect "mvel"
+	when
+		CD : CategoryDescription( id == "Deportes" , program == "Apreciare" )
+	then
+		CD.setName( "Deportes" );
+		CD.setIsDefault( false );
+		CD.setImage( "N/A" );
+end
+
+//from row number: 4
+rule "Row 4 CategoryDescription"
+	dialect "mvel"
+	when
+		CD : CategoryDescription( id == "Donaciones" , program == "Apreciare" )
+	then
+		CD.setName( "Donaciones" );
+		CD.setIsDefault( false );
+		CD.setImage( "N/A" );
+end
+
+//from row number: 5
+rule "Row 5 CategoryDescription"
+	dialect "mvel"
+	when
+		CD : CategoryDescription( id == "Ellas" , program == "Apreciare" )
+	then
+		CD.setName( "Ellas" );
+		CD.setIsDefault( true );
+		CD.setImage( "N/A" );
+end
+
+//from row number: 6
+rule "Row 6 CategoryDescription"
+	dialect "mvel"
+	when
+		CD : CategoryDescription( id == "Ellos" , program == "Apreciare" )
+	then
+		CD.setName( "Ellos" );
+		CD.setIsDefault( false );
+		CD.setImage( "N/A" );
+end
+
+//from row number: 7
+rule "Row 7 CategoryDescription"
+	dialect "mvel"
+	when
+		CD : CategoryDescription( id == "Hogar y cocina" , program == "Apreciare" )
+	then
+		CD.setName( "Hogar y cocina" );
+		CD.setIsDefault( false );
+		CD.setImage( "N/A" );
+end
+
+//from row number: 8
+rule "Row 8 CategoryDescription"
+	dialect "mvel"
+	when
+		CD : CategoryDescription( id == "Mascotas" , program == "Apreciare" )
+	then
+		CD.setName( "Mascotas" );
+		CD.setIsDefault( false );
+		CD.setImage( "N/A" );
+end
+
+//from row number: 9
+rule "Row 9 CategoryDescription"
+	dialect "mvel"
+	when
+		CD : CategoryDescription( id == "Monederos y certificados" , program == "Apreciare" )
+	then
+		CD.setName( "Monederos y certificados" );
+		CD.setIsDefault( false );
+		CD.setImage( "N/A" );
+end
+
+//from row number: 10
+rule "Row 10 CategoryDescription"
+	dialect "mvel"
+	when
+		CD : CategoryDescription( id == "Tecnología y entretenimiento" , program == "Apreciare" )
+	then
+		CD.setName( "Tecnología y entretenimiento" );
+		CD.setIsDefault( false );
+		CD.setImage( "N/A" );
+end
+
+//from row number: 11
+rule "Row 11 CategoryDescription"
+	dialect "mvel"
+	when
+		CD : CategoryDescription( id == "Artículos de viaje" , program == "Motiva" )
+	then
+		CD.setName( "Artículos de viaje" );
+		CD.setIsDefault( false );
+		CD.setImage( "N/A" );
+end
+
+//from row number: 12
+rule "Row 12 CategoryDescription"
+	dialect "mvel"
+	when
+		CD : CategoryDescription( id == "Bebés y niños" , program == "Motiva" )
+	then
+		CD.setName( "Bebés y niños" );
+		CD.setIsDefault( false );
+		CD.setImage( "N/A" );
+end
+
+//from row number: 13
+rule "Row 13 CategoryDescription"
+	dialect "mvel"
+	when
+		CD : CategoryDescription( id == "Deportes" , program == "Motiva" )
+	then
+		CD.setName( "Deportes" );
+		CD.setIsDefault( false );
+		CD.setImage( "N/A" );
+end
+
+//from row number: 14
+rule "Row 14 CategoryDescription"
+	dialect "mvel"
+	when
+		CD : CategoryDescription( id == "Donaciones" , program == "Motiva" )
+	then
+		CD.setName( "Donaciones" );
+		CD.setIsDefault( false );
+		CD.setImage( "N/A" );
+end
+
+//from row number: 15
+rule "Row 15 CategoryDescription"
+	dialect "mvel"
+	when
+		CD : CategoryDescription( id == "Ellas" , program == "Motiva" )
+	then
+		CD.setName( "Ellas" );
+		CD.setIsDefault( false );
+		CD.setImage( "N/A" );
+end
+
+//from row number: 16
+rule "Row 16 CategoryDescription"
+	dialect "mvel"
+	when
+		CD : CategoryDescription( id == "Ellos" , program == "Motiva" )
+	then
+		CD.setName( "Ellos" );
+		CD.setIsDefault( true );
+		CD.setImage( "N/A" );
+end
+
+//from row number: 17
+rule "Row 17 CategoryDescription"
+	dialect "mvel"
+	when
+		CD : CategoryDescription( id == "Hogar y cocina" , program == "Motiva" )
+	then
+		CD.setName( "Hogar y cocina" );
+		CD.setIsDefault( false );
+		CD.setImage( "N/A" );
+end
+
+//from row number: 18
+rule "Row 18 CategoryDescription"
+	dialect "mvel"
+	when
+		CD : CategoryDescription( id == "Mascotas" , program == "Motiva" )
+	then
+		CD.setName( "Mascotas" );
+		CD.setIsDefault( false );
+		CD.setImage( "N/A" );
+end
+
+//from row number: 19
+rule "Row 19 CategoryDescription"
+	dialect "mvel"
+	when
+		CD : CategoryDescription( id == "Monederos y certificados" , program == "Motiva" )
+	then
+		CD.setName( "Monederos y certificados" );
+		CD.setIsDefault( false );
+		CD.setImage( "N/A" );
+end
+
+//from row number: 20
+rule "Row 20 CategoryDescription"
+	dialect "mvel"
+	when
+		CD : CategoryDescription( id == "Tecnología y entretenimiento" , program == "Motiva" )
+	then
+		CD.setName( "Tecnología y entretenimiento" );
+		CD.setIsDefault( false );
+		CD.setImage( "N/A" );
+end
+
+//from row number: 21
+rule "Row 21 CategoryDescription"
+	dialect "mvel"
+	when
+		CD : CategoryDescription( id == "Artículos de viaje" , program == "Fiesta Rewards" )
+	then
+		CD.setName( "Artículos de viaje" );
+		CD.setIsDefault( false );
+		CD.setImage( "N/A" );
+end
+
+//from row number: 22
+rule "Row 22 CategoryDescription"
+	dialect "mvel"
+	when
+		CD : CategoryDescription( id == "Bebés y Niños" , program == "Fiesta Rewards" )
+	then
+		CD.setName( "Bebés y Niños" );
+		CD.setIsDefault( false );
+		CD.setImage( "N/A" );
+end
+
+//from row number: 23
+rule "Row 23 CategoryDescription"
+	dialect "mvel"
+	when
+		CD : CategoryDescription( id == "Deportes" , program == "Fiesta Rewards" )
+	then
+		CD.setName( "Deportes" );
+		CD.setIsDefault( false );
+		CD.setImage( "N/A" );
+end
+
+//from row number: 24
+rule "Row 24 CategoryDescription"
+	dialect "mvel"
+	when
+		CD : CategoryDescription( id == "Donativos y Fundaciones" , program == "Fiesta Rewards" )
+	then
+		CD.setName( "Donativos y Fundaciones" );
+		CD.setIsDefault( false );
+		CD.setImage( "N/A" );
+end
+
+//from row number: 25
+rule "Row 25 CategoryDescription"
+	dialect "mvel"
+	when
+		CD : CategoryDescription( id == "Ellas" , program == "Fiesta Rewards" )
+	then
+		CD.setName( "Ellas" );
+		CD.setIsDefault( false );
+		CD.setImage( "N/A" );
+end
+
+//from row number: 26
+rule "Row 26 CategoryDescription"
+	dialect "mvel"
+	when
+		CD : CategoryDescription( id == "Ellos" , program == "Fiesta Rewards" )
+	then
+		CD.setName( "Ellos" );
+		CD.setIsDefault( false );
+		CD.setImage( "N/A" );
+end
+
+//from row number: 27
+rule "Row 27 CategoryDescription"
+	dialect "mvel"
+	when
+		CD : CategoryDescription( id == "Experiencias" , program == "Fiesta Rewards" )
+	then
+		CD.setName( "Experiencias" );
+		CD.setIsDefault( false );
+		CD.setImage( "N/A" );
+end
+
+//from row number: 28
+rule "Row 28 CategoryDescription"
+	dialect "mvel"
+	when
+		CD : CategoryDescription( id == "Hogar y Cocina" , program == "Fiesta Rewards" )
+	then
+		CD.setName( "Hogar y Cocina" );
+		CD.setIsDefault( false );
+		CD.setImage( "N/A" );
+end
+
+//from row number: 29
+rule "Row 29 CategoryDescription"
+	dialect "mvel"
+	when
+		CD : CategoryDescription( id == "Mascotas" , program == "Fiesta Rewards" )
+	then
+		CD.setName( "Mascotas" );
+		CD.setIsDefault( false );
+		CD.setImage( "N/A" );
+end
+
+//from row number: 30
+rule "Row 30 CategoryDescription"
+	dialect "mvel"
+	when
+		CD : CategoryDescription( id == "Monederos y Certificados" , program == "Fiesta Rewards" )
+	then
+		CD.setName( "Monederos y Certificados" );
+		CD.setIsDefault( false );
+		CD.setImage( "N/A" );
+end
+
+//from row number: 31
+rule "Row 31 CategoryDescription"
+	dialect "mvel"
+	when
+		CD : CategoryDescription( id == "Paga tu Anualidad Santander FR" , program == "Fiesta Rewards" )
+	then
+		CD.setName( "Paga tu Anualidad Santander FR " );
+		CD.setIsDefault( false );
+		CD.setImage( "N/A" );
+end
+
+//from row number: 32
+rule "Row 32 CategoryDescription"
+	dialect "mvel"
+	when
+		CD : CategoryDescription( id == "Servicios" , program == "Fiesta Rewards" )
+	then
+		CD.setName( "Servicios" );
+		CD.setIsDefault( false );
+		CD.setImage( "N/A" );
+end
+
+//from row number: 33
+rule "Row 33 CategoryDescription"
+	dialect "mvel"
+	when
+		CD : CategoryDescription( id == "Tecnología y Entretenimiento" , program == "Fiesta Rewards" )
+	then
+		CD.setName( "Tecnología y Entretenimiento" );
+		CD.setIsDefault( false );
+		CD.setImage( "N/A" );
+end
+
+//from row number: 34
+rule "Row 34 CategoryDescription"
+	dialect "mvel"
+	when
+		CD : CategoryDescription( id == "Transferencia de Puntos" , program == "Fiesta Rewards" )
+	then
+		CD.setName( "Transferencia de Puntos" );
+		CD.setIsDefault( true );
+		CD.setImage( "N/A" );
+end
+
+//from row number: 35
+rule "Row 35 CategoryDescription"
+	dialect "mvel"
+	when
+		CD : CategoryDescription( id == "Points Transfer" , program == "Fiesta Rewards" )
+	then
+		CD.setName( "Points Transfer" );
+		CD.setIsDefault( false );
+		CD.setImage( "N/A" );
+end
+
+//from row number: 36
+rule "Row 36 CategoryDescription"
+	dialect "mvel"
+	when
+		CD : CategoryDescription( id == "Gift Cards" , program == "Fiesta Rewards" )
+	then
+		CD.setName( "Gift Cards" );
+		CD.setIsDefault( false );
+		CD.setImage( "N/A" );
+end
+
+
+
+//from row number: 1
+rule "Row 1 SubCategoryDescription"
+	dialect "mvel"
+	when
+		SCD1 : SubCategoryDescription( id == "1" )
+	then
+		SCD1.setName( "Cocina" );
+		SCD1.setImage( "sub_cocina" );
+end
+
+//from row number: 2
+rule "Row 2 SubCategoryDescription"
+	dialect "mvel"
+	when
+		SCD1 : SubCategoryDescription( id == "2" )
+	then
+		SCD1.setName( "Maquillaje" );
+		SCD1.setImage( "sub_maquillaje" );
+end
+
+//from row number: 3
+rule "Row 3 SubCategoryDescription"
+	dialect "mvel"
+	when
+		SCD1 : SubCategoryDescription( id == "3" )
+	then
+		SCD1.setName( "Deportes" );
+		SCD1.setImage( "sub_deportes" );
+end
+
+//from row number: 4
+rule "Row 4 SubCategoryDescription"
+	dialect "mvel"
+	when
+		SCD1 : SubCategoryDescription( id == "4" )
+	then
+		SCD1.setName( "Herramientas" );
+		SCD1.setImage( "sub_herramientas" );
+end
+
+//from row number: 5
+rule "Row 5 SubCategoryDescription"
+	dialect "mvel"
+	when
+		SCD1 : SubCategoryDescription( id == "5" )
+	then
+		SCD1.setName( "Sony" );
+		SCD1.setImage( "sub_sony" );
+end
+
+//from row number: 6
+rule "Row 6 SubCategoryDescription"
+	dialect "mvel"
+	when
+		SCD1 : SubCategoryDescription( id == "6" )
+	then
+		SCD1.setName( "Microsoft" );
+		SCD1.setImage( "sub_microsoft" );
+end
+
+
