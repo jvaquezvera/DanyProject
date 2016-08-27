@@ -1,7 +1,9 @@
 package com.posadas.process.rules;
-
-
-import com.posadas.process.profileUpdate.*;
+import com.posadas.process.profileupdate.CountryByProgram;
+import com.posadas.process.profileupdate.PackagesByProgram;
+import com.posadas.process.profileupdate.FieldsByPackage;
+import com.posadas.process.profileupdate.RestrictionsByField;
+import com.posadas.process.profileupdate.Messages;
 
 //from row number: 1
 rule "Row 1 PackagesByProgram"
@@ -1534,6 +1536,3 @@ rule "Row 3 CountryByProgram"
 		CountryByProgramType.setCountry01( "México" );
 		CountryByProgramType.setCountry02( "United States of America" );
 end
-
-
-com.posadas.process.profileupdate.CountryByProgram( )
