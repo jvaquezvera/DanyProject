@@ -1,5 +1,8 @@
 package com.posadas.process.rules;
 
+import com.posadas.process.catalog.CategoriesByProgram;
+import com.posadas.process.catalog.CategoryDescription;
+import com.posadas.process.catalog.SubCategoryDescription;
 
 //from row number: 1
 rule "Row 1 CategoriesByProgram"
@@ -530,5 +533,4 @@ rule "Row 6 SubCategoryDescription"
 		SCD1.setName( "Microsoft" );
 		SCD1.setImage( "sub_microsoft" );
 end
-
 
