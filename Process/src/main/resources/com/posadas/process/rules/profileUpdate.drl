@@ -1,6 +1,6 @@
 package com.posadas.process.rules;
 
-import com.posadas.process.beans.*;
+import com.posadas.process.profileUpdate.*;
 
 //from row number: 1
 rule "Row 1 PackagesByProgram"
